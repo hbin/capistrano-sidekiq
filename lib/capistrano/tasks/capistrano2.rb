@@ -12,8 +12,8 @@ Capistrano::Configuration.instance.load do
   _cset(:sidekiq_queue) { nil }
   _cset(:sidekiq_concurrency) { nil }
 
-  _cset(:sidekiq_cmd) { "#{fetch(:bundle_cmd, 'bundle')} exec sidekiq" }
-  _cset(:sidekiqctl_cmd) { "#{fetch(:bundle_cmd, 'bundle')} exec sidekiqctl" }
+  _cset(:sidekiq_cmd) { "#{fetch(:bundle_cmd, 'bundle')} exec dotenv sidekiq" }
+  _cset(:sidekiqctl_cmd) { "#{fetch(:bundle_cmd, 'bundle')} exec dotenv sidekiqctl" }
 
   _cset(:sidekiq_timeout) { 10 }
   _cset(:sidekiq_role) { :app }
